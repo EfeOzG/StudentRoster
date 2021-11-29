@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <MenuBar layoutX="-2.0" layoutY="-1.0" prefHeight="11.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#newMenuItem" text="New" />
+                  <MenuItem mnemonicParsing="false" onAction="#openMenuItem" text="Open" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveMenuItem" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveAsMenuItem" text="Save As" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#closeMenuItem" text="Close" />
+                  <MenuItem mnemonicParsing="false" onAction="#exitMenuItem" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane layoutY="28.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+        <tabs>
+          <Tab text="Roster">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="381.0" prefWidth="604.0">
+                     <children>
+                        <AnchorPane fx:id="rosterLeftPane" prefHeight="451.0" prefWidth="79.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button layoutX="2.0" layoutY="338.0" mnemonicParsing="false" onAction="#newStudent" text="New" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="1.0" layoutY="362.0" mnemonicParsing="false" onAction="#deleteStudent" text="Delete" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="6.0" layoutY="391.0" mnemonicParsing="false" onAction="#saveChanges" text="Save" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutY="321.0" mnemonicParsing="false" onAction="#previousStudent" text="Prev" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="3.0" layoutY="437.0" mnemonicParsing="false" onAction="#nextStudent" text="Next" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="rosterMidPane" layoutX="83.0" prefHeight="451.0" prefWidth="321.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="79.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="subjectLabel" alignment="CENTER" layoutX="6.0" layoutY="7.0" text="STUDENT INFO" textAlignment="CENTER" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+                                 <font>
+                                    <Font size="8.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="32.0" layoutY="40.0" text="Student ID" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="26.0" />
+                              <Label layoutX="39.0" layoutY="88.0" text="First Name" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="54.0" />
+                              <Label layoutX="37.0" layoutY="141.0" text="Last Name" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="82.0" />
+                              <Label layoutX="49.0" layoutY="188.0" text="Major" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="110.0" />
+                              <Label layoutX="10.0" layoutY="219.0" text="Current Grade" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="138.0" />
+                              <Label layoutX="22.0" layoutY="261.0" text="Grade Option" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="166.0" />
+                              <Label layoutX="1.0" layoutY="291.0" text="Honor Status" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="194.0" />
+                              <Label layoutX="37.0" layoutY="329.0" text="Notes" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="222.0" />
+                              <Label layoutX="35.0" layoutY="365.0" text="Photo" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="334.0" />
+                              <TextField fx:id="studentID" editable="false" layoutX="131.0" layoutY="31.0" prefHeight="26.0" prefWidth="142.0" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="22.0" />
+                              <Button layoutX="263.0" layoutY="33.0" mnemonicParsing="false" onAction="#enableEdit" text="Edit ID" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="22.0" />
+                              <TextField fx:id="firstName" layoutX="84.0" layoutY="77.0" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
+                              <TextField fx:id="lastName" layoutX="132.0" layoutY="128.0" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="78.0" />
+                              <TextField fx:id="major" layoutX="131.0" layoutY="181.0" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="106.0" />
+                              <ChoiceBox fx:id="currentGrade" layoutX="141.0" layoutY="217.0" prefHeight="26.0" prefWidth="50.0" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="134.0" />
+                              <RadioButton fx:id="letterGrade" layoutX="123.0" layoutY="261.0" mnemonicParsing="false" text="Letter Grade" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="162.0">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="gradeOption" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="passNotPass" layoutX="233.0" layoutY="265.0" mnemonicParsing="false" text="P / NP" toggleGroup="$gradeOption" AnchorPane.leftAnchor="233.0" AnchorPane.topAnchor="162.0" />
+                              <CheckBox fx:id="honorStatus" layoutX="126.0" layoutY="301.0" mnemonicParsing="false" text="Honor Roll" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="190.0" />
+                              <TextArea fx:id="notes" layoutX="104.0" layoutY="324.0" prefHeight="109.0" prefWidth="220.0" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="218.0" />
+                              <ChoiceBox fx:id="pic" layoutX="233.0" layoutY="403.0" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="330.0" />
+                              <Circle fill="#ffc074" layoutX="326.0" layoutY="428.0" radius="17.0" stroke="#7c7c7c" strokeType="INSIDE" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0">
+                                 <effect>
+                                    <Lighting diffuseConstant="1.34" specularConstant="1.68" specularExponent="17.68" surfaceScale="2.77">
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </Circle>
+                              <Label fx:id="logoLabel" layoutX="303.0" layoutY="426.0" text="rE" textFill="#7c7c7c" AnchorPane.bottomAnchor="13.5" AnchorPane.rightAnchor="10.0">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="photo" fitHeight="87.0" fitWidth="120.0" layoutX="100.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="358.0">
+                                 <image>
+                                    <Image url="@noImage.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="rosterRightPane" layoutX="59.0" prefHeight="451.0" prefWidth="345.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="tableView" editable="true" layoutX="-238.0" layoutY="49.0" onMouseClicked="#tableViewClick" prefHeight="483.0" prefWidth="608.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="tableId" prefWidth="60.0" text="ID" />
+                                  <TableColumn fx:id="tableLastName" prefWidth="115.0" text="Last Name" />
+                                    <TableColumn fx:id="tableFirstName" prefWidth="115.0" text="First Name" />
+                                    <TableColumn fx:id="tableMajor" minWidth="0.0" prefWidth="40.0" text="Major" />
+                                    <TableColumn fx:id="tableCurrentGrade" minWidth="0.0" prefWidth="28.0" text="G" />
+                                    <TableColumn fx:id="tableGradeOption" prefWidth="28.0" text="GO" />
+                                    <TableColumn fx:id="tableHonorStatus" prefWidth="28.0" text="HS" />
+                                    <TableColumn fx:id="tableNotes" prefWidth="167.91668701171875" text="Notes" />
+                                    <TableColumn fx:id="tablePicture" prefWidth="107.0" text="Picture" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Stats">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="451.0" prefWidth="740.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="547.5" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <PieChart fx:id="pieChart" layoutX="24.0" layoutY="25.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="359.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="547.5" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <BarChart fx:id="barChart" layoutX="193.0" layoutY="39.0" title="Students Grade Frequency" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                                <xAxis>
+                                  <CategoryAxis label="Letter Grades" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis label="Frequency" side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

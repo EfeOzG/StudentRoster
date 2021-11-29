@@ -1,0 +1,64 @@
+.root {
+    -fx-font-family: "Courier New";
+    -fx-focus-color: transparent;
+    -fx-focus-color: "darkgray";
+}
+
+.menu:hover {
+    -fx-background-color: rgb(54, 54, 54);
+    -fx-text-fill: rgb(200, 200, 200);
+}
+
+.menu-item:hover {
+    -fx-background-color: rgb(54, 54, 54);
+    -fx-text-fill: rgb(200, 200, 200);
+}
+
+.tab:hover {
+    -fx-background-color: rgb(54, 54, 54);
+    -fx-text-base-color: rgb(200, 200, 200);
+}
+
+.button {
+    -fx-font-family: "Courier New";
+    -fx-font-size: 13;
+}
+
+.button:hover {
+    -fx-background-color: rgb(54, 54, 54);
+    -fx-text-fill: rgb(200, 200, 200);
+}
+
+.label {
+    -fx-font-family: "Courier New";
+}
+
+.text-field {
+    -fx-background-color: "lightgray";
+}
+
+.text-area {
+    -fx-background-color: "lightgray";
+}
+
+.choice-box:hover {
+    -fx-background-color: rgb(54, 54, 54);
+    -fx-text-base-color: rgb(200, 200, 200);
+}
+
+#rosterLeftPane {
+    -fx-background-color: "lightgray";
+}
+
+#tableView {
+    -fx-selection-bar: "lightgray";
+    -fx-focus-color: "darkgray";
+}
+
+#subjectLabel {
+    -fx-font-size: 13;
+}
+
+#logoLabel {
+    -fx-font-size: 13;
+}

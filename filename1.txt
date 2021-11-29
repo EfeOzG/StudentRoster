@@ -1,0 +1,23 @@
+100001 / Roger / Mullens / MBA / A / 2 / 1 / Transfer student / magmar.png
+100002 / Harry / Potter / PSY / A / 1 / 1 / Main student, but still needs improvement / magmar.png
+100003 / Ron / Weasley / CS / B / 1 / 1 / Talented student
+ / onix.png
+100005 / Hagrid / Rubeus / MSWE / A / 1 / 1 / MSWE Student / growlite.png
+100007 / Hikmet / Tamer / BBA / C / 1 / 1 / Payment pending / onix.png
+100008 / Gokce / Ozcivelek / HIST / B / 2 / 1 / Expected PHD Student / onix.png
+100009 / Efe / Ozcivelek / PSY / B / 1 / 1 / Transfer student / abra.png
+100010 / Esref Efe / Ozcivelek / MSWE / A / 1 / 1 / MSWE Student / onix.png
+100011 / Michael / Scott / LIT / F / 1 / 1 / Failed LIT204 / abra.png
+100012 / Murat / Kaya / MSWE / B / 2 / 1 / Needs to complete prerequisites / magmar.png
+100013 / Jim / Halpert / MBA / A / 2 / 1 / Prerequisites were completed / abra.png
+100014 / Pam / Beasley / MDS / B / 2 / 1 / Graduating student / abra.png
+100015 / Kevin / Malone / CHEM / B / 1 / 1 / Graduating student / onix.png
+100016 / Dwight / Schrute / BIO / F / 2 / 1 / Class of 2022 / scyther.png
+100017 / Hermonie / Granger / BIO / F / 1 / 1 / Expected PHD student / abra.png
+100019 / Draco / Malfoy / ART / B / 2 / 1 / Needs to study / abra.png
+100020 / Neville / Longbottom / MSWE / D / 2 / 1 / Expected PHD student / scyther.png
+100025 / James / Potter / MSWE / F / 1 / 1 / New student / onix.png
+100026 / Moaning / Myrtle / LIT / A / 1 / 1 / Transfer student / growlite.png
+100032 / John / Smith / CS / B / 1 / 0 / New student / magmar.png
+100033 / Gabe / Lewis / CS / D / 2 / 0 / Failing student / onix.png
+100034 / Berna / Senemoglu / MBA / A / 1 / 1 / Perfect Student / growlite.png
